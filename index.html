@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#6d28d9">
+<title>Ayanshi Online Shop & Xerox</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#f5f3ff;color:#171717}
+header{background:linear-gradient(135deg,#6d28d9,#9333ea);color:#fff;padding:24px 18px;border-radius:0 0 24px 24px}
+h1{margin:0 0 7px;font-size:25px}header p{margin:0;opacity:.9}
+.container{padding:16px;max-width:720px;margin:auto}
+.card{background:#fff;border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 4px 16px #00000012}
+.service{display:flex;align-items:center;gap:12px;border:1px solid #eee;padding:13px;border-radius:14px;margin:9px 0}
+.icon{font-size:27px}.service b{display:block}.service small{color:#666}
+button{border:0;border-radius:14px;padding:14px 18px;font-size:16px;font-weight:700;cursor:pointer}
+.wa{background:#16a34a;color:white;width:100%;margin-top:10px}.call{background:#2563eb;color:white;width:100%;margin-top:10px}
+input{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;margin:7px 0;font-size:15px}
+.note{font-size:13px;color:#666;line-height:1.5}.address{font-weight:600}
+footer{text-align:center;padding:22px;color:#666;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <h1>📱 Ayanshi Online Shop & Xerox</h1>
+    <p>Online Form • Xerox • Print • Scan • Document Work</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>🛠️ અમારી સેવાઓ</h2>
+    <div class="service"><span class="icon">🪪</span><div><b>PAN Card</b><small>PAN સંબંધિત ઓનલાઈન કામ</small></div></div>
+    <div class="service"><span class="icon">🗳️</span><div><b>ચૂંટણી કાર્ડ</b><small>Voter ID સંબંધિત કામ</small></div></div>
+    <div class="service"><span class="icon">🧑‍🔧</span><div><b>શ્રમ કાર્ડ</b><small>શ્રમ કાર્ડ માટે ઓનલાઈન સેવા</small></div></div>
+    <div class="service"><span class="icon">📄</span><div><b>Resume</b><small>Resume બનાવવું / સુધારવું</small></div></div>
+    <div class="service"><span class="icon">🖨️</span><div><b>Xerox / Print</b><small>Colour અને Black & White Print</small></div></div>
+    <div class="service"><span class="icon">📑</span><div><b>Scan / PDF</b><small>Document Scan અને PDF</small></div></div>
+    <div class="service"><span class="icon">📝</span><div><b>Online Form</b><small>સરકારી/ઓનલાઈન ફોર્મ ભરવાનું કામ</small></div></div>
+    <div class="service"><span class="icon">📸</span><div><b>Photo / Signature</b><small>Resize, Edit અને Online ઉપયોગ માટે તૈયાર</small></div></div>
+  </section>
+
+  <section class="card">
+    <h2>📤 Document મોકલો</h2>
+    <input id="name" placeholder="તમારું નામ">
+    <input id="service" placeholder="કયું કામ કરાવવું છે?">
+    <button class="wa" onclick="sendWhatsApp()">💬 WhatsApp પર Document મોકલો</button>
+    <p class="note">બટન દબાવ્યા પછી WhatsApp ખુલશે. ત્યાં તમારો Document/Photo attach કરીને Send કરો.</p>
+  </section>
+
+  <section class="card">
+    <h2>📞 સંપર્ક</h2>
+    <button class="call" onclick="location.href='tel:6351492751'">📞 6351492751 પર Call કરો</button>
+    <button class="wa" onclick="location.href='https://wa.me/916351492751'">💬 WhatsApp Chat</button>
+  </section>
+
+  <section class="card">
+    <h2>📍 Shop Address</h2>
+    <p class="address">ગામ બલૈયા, CHC Hospitalની બાજુમાં</p>
+  </section>
+</main>
+
+<footer>© Ayanshi Online Shop & Xerox</footer>
+
+<script>
+function sendWhatsApp(){
+  const name=document.getElementById('name').value.trim() || 'Customer';
+  const service=document.getElementById('service').value.trim() || 'Online Work';
+  const msg=`નમસ્તે Ayanshi Online Shop & Xerox,%0Aમારું નામ: ${encodeURIComponent(name)}%0Aકામ: ${encodeURIComponent(service)}%0Aહું Document/Photo WhatsApp પર મોકલું છું.`;
+  location.href='https://wa.me/916351492751?text='+msg;
+}
+</script>
+</body>
+</html>
